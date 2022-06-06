@@ -1,18 +1,9 @@
 from django.contrib import admin
-from django.http import HttpResponse
 from django.urls import path
-
-def dashboard(request):
-    return HttpResponse("Dashboard Page")
-
-def about(request):
-    return HttpResponse("About Page")
-
-def contacts(request):
-    return HttpResponse("Contacts Page")
+from . import views
 
 urlpatterns = [
-    path('',dashboard),
-    path('about/',about),
-    path('contacts',contacts),
+    path('',views.dashboard),
+    path('about/',views.about),
+    path('contacts',views.contacts),
 ]
