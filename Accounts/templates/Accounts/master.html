@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -16,9 +17,10 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+    <link rel="stylesheet" href="{% static "Accounts/css/style.css" %}" />
   </head>
   <body>
-    {% include 'accounts/components/navbar.html' %}
+    {% include 'Accounts/components/navbar.html' %}
     <div class="container mt-3">{% block content %}{% endblock content %}</div>
   </body>
 </html>
